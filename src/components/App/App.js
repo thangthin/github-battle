@@ -4,6 +4,7 @@ import { BrowserRouter as Router, NavLink, Route, Switch } from 'react-router-do
 import Nav from '../Nav/Nav';
 import Battle from '../Battle/Battle';
 import Home from '../Home/Home';
+import Results from '../Results/Results';
 
 class App extends React.Component {
   render() {
@@ -14,6 +15,7 @@ class App extends React.Component {
             <Switch>
               <Route path='/' exact component={Home} />
               <Route path='/battle' exact component={Battle} />
+              <Route path='/battle/results' component={Results} /> 
               <Route path='/popular' exact component={Popular} />
               <Route render={() => (<p>Not Found Homie</p>)} />
             </Switch>

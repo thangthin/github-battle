@@ -4,6 +4,7 @@ import queryString from 'query-string';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import PlayerPreview from '../PlayerPreview/PlayerPreview';
+import Loading from '../Loading/Loading';
 
 function Profile (props) {
   var info = props.info;
@@ -86,7 +87,7 @@ class Results extends React.Component {
     var loading = this.state.loading;
 
     if (loading === true) {
-      return <p>Loading!</p>
+      return <Loading text="Downloading"/>
     }
 
     if (error) {
